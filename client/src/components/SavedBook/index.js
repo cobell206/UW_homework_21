@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import API from '../../utils/API'
-import { Input, TextArea, FormBtn } from "../Form";
 const axios = require('axios')
 
 
