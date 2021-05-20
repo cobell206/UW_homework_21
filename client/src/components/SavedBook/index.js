@@ -16,6 +16,16 @@ class BookCard extends Component {
         this.state = {props}
     }
 
+    deleteBook(id) {
+
+        console.log(this.props.data._id);
+        API.deleteBook(this.props.data._id)
+            .then(window.location.reload())
+            .catch(err => console.log(err))
+
+        
+    }
+
     render() {
         return (
             <div className='row'>
@@ -27,6 +37,7 @@ class BookCard extends Component {
                                 <img className='img' src={this.props.data.image}></img>
                             </div>
                             <a href={this.props.data.link} className="btn btn-primary m-1" target='_blank'>View on Google</a>
+                            <button type='submit' className='btn btn-primary' onClick={()=>this.deleteBook()}>Delete</button>
                         </div>
                         <div className='col-md-9'>
                             <div className='card-body'>

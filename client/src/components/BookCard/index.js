@@ -27,10 +27,7 @@ class BookCard extends Component {
             link: this.state.props.data.volumeInfo.previewLink,
         }
 
-        console.log(data);
-
         API.saveBook(data)
-            // .then(res => alert('Saved!'))
             .catch(err => console.log(err));
 
         return

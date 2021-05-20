@@ -11,12 +11,10 @@ function Search() {
       })
 
     useEffect(() => {
-        // loadBooks('Lord of the rings')
     }, [])
 
     function loadBooks(q_terms) {
 
-        // var q_terms = 'Lord of the rings'
         var base_url = `https://www.googleapis.com/books/v1/volumes?q=${q_terms}&maxResults=5&orderBy=relevance`
 
         axios.get(base_url)
